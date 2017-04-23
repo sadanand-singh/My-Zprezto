@@ -10,6 +10,9 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+path=('/home/ssingh/.local/bin' $path)
+export PATH
+
 alias vi=nvim
 alias vim=nvim
 alias st3=subl3
