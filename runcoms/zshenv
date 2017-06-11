@@ -15,8 +15,8 @@ export PATH
 
 alias vi=nvim
 alias vim=nvim
-alias st3=subl3
-alias pipupgrade="pip3 freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install --user -U"
+alias st3=subl
+alias pipupgrade="pip3 install --user -U -r $HOME/.local/share/python_packages.txt"
 
 function pyclean() {
     ZSH_PYCLEAN_PLACES=${*:-'.'}
