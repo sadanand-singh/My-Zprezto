@@ -14,5 +14,3 @@ fi
 if [ -f ~/.zsh.aliases ]; then
     . ~/.zsh.aliases
 fi
-
-export GOPATH=$HOME/code/go
