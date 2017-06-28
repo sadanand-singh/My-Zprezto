@@ -40,6 +40,5 @@ key[PageDown]=${terminfo[knp]}
 
 #setup zcompletion for brew
 fpath=(/usr/local/share/zsh-completions $fpath)
-fpath=(~/.zprezto/completion $fpath)
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
