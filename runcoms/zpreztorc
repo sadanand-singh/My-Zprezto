@@ -130,21 +130,6 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
 #
-<<<<<<< HEAD
-# Python
-#
-
-# Auto switch the Python virtualenv on directory change.
-# zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
-
-# Automatically initialize virtualenvwrapper if pre-requisites are met.
-# zstyle ':prezto:module:python:virtualenv' initialize 'yes'
-
-#
-=======
->>>>>>> 5f8c29b7dbd5c191964c705aeb4a682d5fa2ce7b
-# Screen
-#
 
 # Auto start a session when Zsh is launched in a local terminal.
 # zstyle ':prezto:module:screen:auto-start' local 'yes'
