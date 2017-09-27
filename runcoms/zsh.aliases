@@ -5,7 +5,7 @@ alias vi=nvim
 alias vim=nvim
 alias st3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias pipupgrade="pip3 freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U"
+alias pipupgrade="pip3 install --user -U -r $HOME/.zprezto/modules/python/python_packages.txt"
 alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 alias updateBrew="brew update && brew upgrade && brew cleanup && brew cask cleanup"
 

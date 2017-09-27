@@ -3,6 +3,9 @@ h5py
 jupyter
 ipython
 sklearn-deap
+scikit-image
+tensorflow
+pillow
 graphviz
 numpy
 scipy
