@@ -1,0 +1,17 @@
+pandas
+h5py
+jupyter
+ipython
+sklearn-deap
+graphviz
+numpy
+scipy
+matplotlib
+seaborn
+plotnine
+bokeh
+scikit-learn
+sklearn-pandas
+mlxtend
+keras
+pylint
