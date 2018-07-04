@@ -1,5 +1,11 @@
+pillow
+hyperopt
+torchvision
+tqdm
+keras-tqdm
 pandas
 h5py
+imutils
 jupyter
 ipython
 sklearn-deap
@@ -13,6 +19,7 @@ matplotlib
 seaborn
 plotnine
 bokeh
+holoviews
 scikit-learn
 sklearn-pandas
 mlxtend
