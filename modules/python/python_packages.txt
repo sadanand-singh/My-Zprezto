@@ -1,8 +1,9 @@
+black
+cython
+numba
+flake8
 pillow
 hyperopt
-torchvision
-tqdm
-keras-tqdm
 pandas
 h5py
 imutils
@@ -10,9 +11,7 @@ jupyter
 ipython
 sklearn-deap
 scikit-image
-tensorflow
 pillow
-graphviz
 numpy
 scipy
 matplotlib
@@ -23,5 +22,4 @@ holoviews
 scikit-learn
 sklearn-pandas
 mlxtend
-keras
 pylint
