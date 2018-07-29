@@ -1,0 +1,55 @@
+{
+	"always_show_minimap_viewport": true,
+	"auto_complete": true,
+	"bold_folder_labels": true,
+	"caret_extra_width": 1.5,
+	"color_scheme": "Packages/DA CS/Material.tmTheme",
+	"default_line_ending": "unix",
+	"drag_text": false,
+	"draw_white_space": "false",
+	"enable_tab_scrolling": false,
+	"font_face": "Hack",
+	"font_options":
+	[
+		"directwrite",
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 13,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"C++",
+		"Python",
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"overlay_scroll_bars": "enabled",
+	"remember_open_files": false,
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": true,
+	"soda_classic_tabs": true,
+	"soda_folder_icons": true,
+	"tab_completion": false,
+	"tab_size": 4,
+	"theme": "DA.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"ui_font_roboto_mono": true,
+	"ui_font_size_small": true,
+	"ui_font_source_code_pro": true,
+	"ui_native_titlebar": true,
+	"ui_separator": true,
+	"ui_wide_scrollbars": true,
+	"word_wrap": true
+}
+
