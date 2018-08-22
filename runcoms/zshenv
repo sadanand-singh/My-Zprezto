@@ -10,6 +10,9 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+alias vpnconnect="sudo openconnect --user=sadanand https://mirvpn.wustl.edu/nrg"
+alias mount_zion="sshfs -o allow_other,IdentityFile=/home/sadanand/.ssh/id_ed25519 sadanand@zion: /home/sadanand/zion_home"
+alias eject_zion="sudo umount /home/sadanand/zion_home"
 alias vi=nvim
 alias vim=nvim
 alias st3=subl
