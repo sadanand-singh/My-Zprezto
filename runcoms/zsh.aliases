@@ -1,0 +1,60 @@
+alias python=python3
+alias pip=pip3
+alias vi=nvim
+alias vim=nvim
+alias st3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias pipupgrade="pip3 install --user -U -r $HOME/.zprezto/modules/python/python_packages.txt"
+alias cppcompile='c++ -std=c++11 -stdlib=libc++'
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+alias updateBrew="brew update && brew upgrade && brew cleanup && brew cask cleanup"
+
+function pyclean() {
+    ZSH_PYCLEAN_PLACES=${*:-'.'}
+    find ${ZSH_PYCLEAN_PLACES} -type f -name "*.py[co]" -delete
+    find ${ZSH_PYCLEAN_PLACES} -type d -name "__pycache__" -delete
+}
+
+# man() {
+#     env \
+#     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+#     LESS_TERMCAP_md=$(printf "\e[1;31m") \
+#     LESS_TERMCAP_me=$(printf "\e[0m") \
+#     LESS_TERMCAP_se=$(printf "\e[0m") \
+#     LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+#     LESS_TERMCAP_ue=$(printf "\e[0m") \
+#     LESS_TERMCAP_us=$(printf "\e[1;32m") \
+#     man "$@"
+# }
+
+cdf() {
+    target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
+    if [ "$target" != "" ]; then
+        cd "$target"; pwd
+    else
+        echo 'No Finder window found' >&2
+    fi
+}
+
+realpath()
+{
+  CURR_PATH=$(pwd)
+  TARGET_FILE=$1
+  cd $(dirname ${TARGET_FILE})
+  TARGET_FILE=$(basename ${TARGET_FILE})
+
+  # Iterate down a (possible) chain of symlinks
+  while [ -L "${TARGET_FILE}" ]
+  do
+      TARGET_FILE=$(readlink ${TARGET_FILE})
+      cd $(dirname ${TARGET_FILE})
+      TARGET_FILE=$(basename ${TARGET_FILE})
+  done
+
+  # Compute the canonicalized name by finding the physical path
+  # for the directory we're in and appending the target file.
+  PHYS_DIR=$(pwd -P)
+  RESULT=${PHYS_DIR}/${TARGET_FILE}
+  echo ${RESULT}
+  cd ${CURR_PATH}
+}
