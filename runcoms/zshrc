@@ -13,7 +13,7 @@ fi
 # Customize to your needs...
 
 # User defined auto completiom
-fpath=(~/.zprezto/completion $fpath)
+fpath=(/usr/local/share/zsh-completions $HOME/.zprezto/completion $fpath)
 autoload -U compinit
 compinit
 
@@ -49,3 +49,8 @@ key[PageDown]=${terminfo[knp]}
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
 export CUDA_HOME=/usr/local/cuda/
+
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source activate py3.7-dev
