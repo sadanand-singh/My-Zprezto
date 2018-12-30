@@ -43,6 +43,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /Users/sadanand/anaconda3/bin
   /usr/local/{bin,sbin}
   /Users/sadanand/Library/Python/3.7/bin
   $path
