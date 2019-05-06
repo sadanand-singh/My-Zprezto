@@ -44,6 +44,7 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  /usr/local/opt/node@10/bin
   /Users/sadanand/Library/Python/3.7/bin
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   $path
@@ -75,3 +76,6 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 GOPATH="$HOME/.go"
+
+export LDFLAGS="-L/usr/local/opt/node@10/lib"
+export CPPFLAGS="-I/usr/local/opt/node@10/include"
