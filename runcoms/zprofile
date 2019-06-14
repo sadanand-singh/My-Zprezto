@@ -48,6 +48,8 @@ path=(
   /Users/sadanand/Library/Python/3.7/bin
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   "/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
+  /usr/local/opt/openssl/bin
+  /usr/local/opt/curl/bin
   $path
 )
 
@@ -78,5 +80,5 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 GOPATH="$HOME/.go"
 
-export LDFLAGS="-L/usr/local/opt/node@10/lib"
-export CPPFLAGS="-I/usr/local/opt/node@10/include"
+export LDFLAGS="-L/usr/local/opt/node@10/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/curl/lib"
+export CPPFLAGS="-I/usr/local/opt/node@10/include -I/usr/local/opt/openssl/include -I/usr/local/opt/curl/include"

@@ -1,3 +1,5 @@
+alias gcc=gcc-9
+alias g++=g++-9
 alias vi=nvim
 alias vim=nvim
 alias st3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
