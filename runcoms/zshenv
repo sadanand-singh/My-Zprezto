@@ -15,10 +15,6 @@ alias mount_zion="sshfs -o allow_other,IdentityFile=/home/sadanand/.ssh/id_ed255
 alias eject_zion="sudo umount /home/sadanand/zion_home"
 alias vi=nvim
 alias vim=nvim
-alias st3=subl
-alias python=python3
-alias pipupgrade="pip3 install --user -U -r $HOME/.local/share/python_packages.txt"
-alias bazelbuild="bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 --config=cuda -k //tensorflow/tools/pip_package:build_pip_package"
 
 function pyclean() {
     ZSH_PYCLEAN_PLACES=${*:-'.'}

@@ -52,6 +52,39 @@ export CUDA_HOME=/usr/local/cuda/
 
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+CODESTATS_API_KEY="SFMyNTY.YzJGa1lXNWhibVF0YzJsdVoyZz0jI05UZzFPUT09.NaqskoEaom3jDfTs-IBrSUEBwSRH1-NP1zWFbSmwR4I"
+##############################
+# Zplug
+##############################
+
+# Check if zplug is installed
+if [[ ! -d ~/.zplug ]]; then
+  git clone https://github.com/zplug/zplug ~/.zplug
+  source ~/.zplug/init.zsh && zplug update --self
+fi
+
+# Essential
+source ~/.zplug/init.zsh
+
+# Zplug plugins
+zplug "zplug/zplug"
+zplug "rimraf/k"
+zplug "b4b4r07/enhancd", use:init.sh
+zplug "code-stats/code-stats-zsh", from:gitlab, use:"codestats.plugin.zsh"
+
+# Install packages that have not been installed yet
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    else
+        echo
+    fi
+fi
+
+zplug load --verbose
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # added by Anaconda3 2018.12 installer
@@ -71,4 +104,4 @@ fi
 unset __conda_setup
 # <<< conda init <<<
 
-source activate py3.7-dev
+source activate pytorch-cu10-py36
