@@ -72,6 +72,7 @@ zplug "zplug/zplug"
 zplug "rimraf/k"
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "code-stats/code-stats-zsh", from:gitlab, use:"codestats.plugin.zsh"
+zplug "agkozak/zsh-z"
 
 # Install packages that have not been installed yet
 if ! zplug check --verbose; then
