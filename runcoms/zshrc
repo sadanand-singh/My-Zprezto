@@ -53,7 +53,7 @@ export CUDA_HOME=/usr/local/cuda/
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
-CODESTATS_API_KEY="SFMyNTY.YzJGa1lXNWhibVF0YzJsdVoyZz0jI05UZzFPUT09.NaqskoEaom3jDfTs-IBrSUEBwSRH1-NP1zWFbSmwR4I"
+CODESTATS_API_KEY="SFMyNTY.YzJGa1lXNWhibVF0YzJsdVoyZz0jI05qSTBNdz09.13uiHAzscUwfI3SCvtJFPt9jwraVq-eYiXw2se0dC6A"
 ##############################
 # Zplug
 ##############################
@@ -105,4 +105,4 @@ fi
 unset __conda_setup
 # <<< conda init <<<
 
-source activate pytorch-cu10-py36
+source activate py36-cu10
