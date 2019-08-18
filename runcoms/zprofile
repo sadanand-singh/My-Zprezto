@@ -44,7 +44,6 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  /usr/local/opt/node@10/bin
   /Users/sadanand/Library/Python/3.6/bin
   /Users/sadanand/Library/Python/3.7/bin
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -81,5 +80,5 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 GOPATH="$HOME/.go"
 
-export LDFLAGS="-L/usr/local/opt/node@10/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/libffi/lib"
-export CPPFLAGS="-I/usr/local/opt/node@10/include -I/usr/local/opt/openssl/include -I/usr/local/opt/curl/include"
+export LDFLAGS="-L/usr/local/opt/libffi/lib -L/usr/local/opt/gettext/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/libffi/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/sqlite/lib -L/usr/local/opt/ncurses/lib"
+export CPPFLAGS="-I/usr/local/opt/gettext/include -I/usr/local/opt/openssl/include -I/usr/local/opt/curl/include -I/usr/local/opt/readline/include -I/usr/local/opt/sqlite/include -I/usr/local/opt/ncurses/include"
