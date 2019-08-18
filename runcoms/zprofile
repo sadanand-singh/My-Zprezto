@@ -81,5 +81,5 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 GOPATH="$HOME/.go"
 
-export LDFLAGS="-L/usr/local/opt/node@10/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/curl/lib"
+export LDFLAGS="-L/usr/local/opt/node@10/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/curl/lib -L/usr/local/opt/libffi/lib"
 export CPPFLAGS="-I/usr/local/opt/node@10/include -I/usr/local/opt/openssl/include -I/usr/local/opt/curl/include"
