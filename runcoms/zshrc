@@ -94,4 +94,4 @@ fi
 unset __conda_setup
 # <<< conda init <<<
 
-source activate py3.7-dev
+source activate py36-dev

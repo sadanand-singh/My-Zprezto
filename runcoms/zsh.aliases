@@ -1,13 +1,9 @@
-alias gcc=gcc-9
-alias g++=g++-9
+alias gcc9=gcc-9
+alias l='ls -lAh'
 alias vi=nvim
 alias vim=nvim
-alias st3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias pipupgrade="pip3 install --user -U -r $HOME/.zprezto/modules/python/python_packages.txt"
-alias cppcompile='c++ -std=c++11 -stdlib=libc++'
-alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 alias updateBrew="brew update && brew upgrade && brew cleanup && brew cask cleanup"
+alias update='brew update; brew upgrade; brew cleanup; brew doctor; /usr/sbin/softwareupdate -ia'
 
 function pyclean() {
     ZSH_PYCLEAN_PLACES=${*:-'.'}
@@ -15,17 +11,17 @@ function pyclean() {
     find ${ZSH_PYCLEAN_PLACES} -type d -name "__pycache__" -delete
 }
 
-# man() {
-#     env \
-#     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-#     LESS_TERMCAP_md=$(printf "\e[1;31m") \
-#     LESS_TERMCAP_me=$(printf "\e[0m") \
-#     LESS_TERMCAP_se=$(printf "\e[0m") \
-#     LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-#     LESS_TERMCAP_ue=$(printf "\e[0m") \
-#     LESS_TERMCAP_us=$(printf "\e[1;32m") \
-#     man "$@"
-# }
+man() {
+    env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
 
 cdf() {
     target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`

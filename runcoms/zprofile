@@ -45,6 +45,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   /usr/local/opt/node@10/bin
+  /Users/sadanand/Library/Python/3.6/bin
   /Users/sadanand/Library/Python/3.7/bin
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   "/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
