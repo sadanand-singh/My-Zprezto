@@ -105,4 +105,4 @@ fi
 unset __conda_setup
 # <<< conda init <<<
 
-source activate pytorch-cu10-py36
+source activate pytorch1.0.1-py36
