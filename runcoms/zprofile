@@ -44,10 +44,9 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  /Users/sadanand/Library/Python/3.6/bin
-  /Users/sadanand/Library/Python/3.7/bin
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   "/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
+  /usr/local/opt/openssl@1.1/bin
   /usr/local/opt/openssl/bin
   /usr/local/opt/curl/bin
   $path
