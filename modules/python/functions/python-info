@@ -35,6 +35,12 @@ if [[ -n "$virtualenv_format" ]]; then
     zformat -f virtualenv_formatted "$virtualenv_format" "v:${CONDA_DEFAULT_ENV:t}"
     python_info[virtualenv]="$virtualenv_formatted"
   fi
+
+  # Do the same for singularity containers
+  if [[ -n "$SINGULARITY_CONTAINER" ]]; then
+    zformat -f virtualenv_formatted "$virtualenv_format" "v:${SINGULARITY_CONTAINER:t}"
+    python_info[virtualenv]="$virtualenv_formatted"
+  fi
 fi
 
 if [[ -n "$version_format" ]]; then

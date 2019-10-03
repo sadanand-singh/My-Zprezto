@@ -10,11 +10,27 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-alias vpnconnect="sudo openconnect --user=sadanand https://mirvpn.wustl.edu/nrg"
-alias mount_zion="sshfs -o allow_other,IdentityFile=/home/sadanand/.ssh/id_ed25519 sadanand@zion: /home/sadanand/zion_home"
-alias eject_zion="sudo umount /home/sadanand/zion_home"
-alias vi=nvim
-alias vim=nvim
+alias vi=vim
+
+alias squeues='squeue -o  "%.8i %.9P %.8u %.80j %.2t %.10M %.10L %.6b %.4C %R"'
+alias sq=squeues
+alias sdev="srun -c 1 -p day --pty bash"
+alias sdev-gpu="srun -c 1 -p day --gres=gpu:1 --pty bash"
+alias sresource="scontrol show jobid -dd"
+alias nsmi="watch -n 0.5 nvidia-smi"
+
+alias start-notebook='jupyter notebook --ip="0.0.0.0" --NotebookApp.token="pinkfloyd" --no-browser'
+alias notebook=start-notebook
+alias la='ls -lAh'
+
+alias sq_summary='python3 /storage/group/whiterabbit/slurm-summary/sq_summary.py'
+
+alias singu="singularity shell --shell /usr/bin/zsh --nv -B /data:/data -B /storage:/storage"
+alias pytorch="singu /storage/group/whiterabbit/singularity/pytorch1.2-cuda10.0-mlflow2019.10.0.img"
+alias maskrcnn="singu /storage/group/whiterabbit/singularity/maskrcnn-cuda10-facebook.img"
+
+export R="/storage/user/`whoami`"
+export G="/storage/group/whiterabbit"
 
 function pyclean() {
     ZSH_PYCLEAN_PLACES=${*:-'.'}
