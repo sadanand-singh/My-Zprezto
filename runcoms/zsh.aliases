@@ -2,8 +2,6 @@ alias gcc9=gcc-9
 alias l='ls -lAh'
 alias vi=nvim
 alias vim=nvim
-alias py="pipenv run"
-alias activate="pipenv shell"
 alias updateBrew="brew update && brew upgrade && brew cleanup && brew cask cleanup"
 alias update='brew update; brew upgrade; brew cleanup; brew doctor; /usr/sbin/softwareupdate -ia'
 

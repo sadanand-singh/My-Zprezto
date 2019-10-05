@@ -14,8 +14,3 @@ fi
 if [ -f ~/.zsh.aliases ]; then
     . ~/.zsh.aliases
 fi
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-eval "$(pipenv --completion)"
